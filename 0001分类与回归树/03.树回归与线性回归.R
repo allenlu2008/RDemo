@@ -10,7 +10,6 @@ text(1997,14000,paste("Adjusted R-squared: ",summary(bj.lm)$adj.r.squared))
 
 bj.tree <- tree(gdp~year,data=bj)
 summary(bj.tree)
-x11()
 plot(bj.tree)
 text(bj.tree)
 
@@ -42,9 +41,6 @@ abline(bj4.lm,col="red",lwd=1)
 text(1990,2000,paste("Adjusted R-squared: ",summary(bj4.lm)$adj.r.squared))
 summary(bj4.lm)
 
-lines(x=c(-1000000,1954270),y=c(64003,64003),col="blue",lwd=2)
-lines(x=c(1954270,100000000),y=c(324686,324686),col="green",lwd=2)
-
 
 plot(bj$year,bj$gdp)
 abline(bj.lm,col="red",lwd=1,lty=5)
@@ -56,6 +52,6 @@ text(2000.5,22200,">2000.5")
 abline(bj2.lm,col="green",lwd=1)
 text(2010,16000,"2006年之后回归线",col="green")
 abline(bj3.lm,col="blue",lwd=1)
-text(2012,11000,"2001-2006年回归线",col="blue")
+text(2012,11000,"2001-2006\n年回归线",col="blue")
 abline(bj4.lm,col="orange",lwd=1)
 text(1990,2000,"2001年之前回归线",col="orange")
